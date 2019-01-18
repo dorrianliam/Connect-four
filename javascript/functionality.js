@@ -9,6 +9,8 @@ function toggleTurn() {
   return turn;
 }
 
+
+
 function canvasClicked(cell) {
   var cellIndex = cell.getAttribute('cell');
   if (!cells[cellIndex]) {
@@ -21,8 +23,6 @@ function canvasClicked(cell) {
       cell.innerHTML = "<img src='images/red.png' style='width:80px; height:80px'>";
       $("td").eq(cellIndex - num).addClass("test2")
       $("td").eq(cellIndex - 1).addClass("animated bounceInDown ")
-
-
     }
     checkWinner();
   }
@@ -117,7 +117,7 @@ function playAgain() { // just another function to reset the game
     location.reload();
   } else {
     alert('Good Bye Then!!');
-    $("table").addClass("test1")
+
   }
 }
 
