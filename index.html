@@ -1,160 +1,157 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-
-<head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-                integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <script src="javascript/wow.js"></script>
-        <script>
-                new WOW().init();
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title> Connect four game</title>
+      <meta name="description" content="">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/animate.css">
+      <script src="javascript/wow.js"></script>
+      <script>
+         new WOW().init();
       </script>
-        <script src="javascript/functionality.js"></script>
-</head>
-
-<body>
-        <h1>Connect Four</h1>
-        <div class="container">
-                <div class="row">
-                        <div class="col-md-2">
-                                <button type="button" onclick="restart()" class="btn btn-primary">Restart</button>
-                        </div>
-                        <div class="col-md-8">
-                                <table style="width:100%;">
-                                        <tr>
-                                                <td id="div1" cell="1" class=" test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                <td id="div2" cell="2" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div3" cell="3" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div4" cell="4" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div5" cell="5" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div6" cell="6" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                                <td id="div7" cell="7" class="test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div8" cell="8" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div9" cell="9" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div10" cell="10" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div11" cell="11" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div12" cell="12" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                                <td id="div13" cell="13" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div14" cell="14" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div15" cell="15" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div16" cell="16" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div17" cell="17" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div18" cell="18" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                                <td id="div19" cell="19" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div20" cell="20" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div21" cell="21" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div22" cell="22" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div23" cell="23" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div24" cell="24" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                                <td id="div25" cell="25" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div26" cell="26" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div27" cell="27" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div28" cell="28" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div29" cell="29" class=" panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div30" cell="30" class="panel test1" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                        <tr>
-                                                <td id="div31" cell="31" class=" panel" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div32" cell="32" class="panel " onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div33" cell="33" class=" panel" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div34" cell="34" class=" panel" onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div35" cell="35" class="panel " onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                                <td id="div36" cell="36" class="panel " onclick="canvasClicked(this)"><img
-                                                                src="images/grey.png" style="width:80px; height:80px;"></td>
-                                                </td>
-                                        </tr>
-                                </table>
-                        </div>
-                        <div class="col-md-2">
-                                <p id='demo'>player 1 start off</p>
-                        </div>
-                </div>
-        </div>
-        <div id="div9" cell="9" class="" onclick="canvasClicked(this);"></div>
-</body>
-
+      <script src="javascript/functionality.js"></script>
+   </head>
+   <body>
+      <h1>Connect Four</h1>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2">
+               <button type="button" onclick="restart()" class="btn btn-primary">Restart</button>
+            </div>
+            <div class="col-md-8">
+               <table style="width:100%;">
+                  <tr>
+                     <td id="div1" cell="1" class=" test1"><img src="images/grey.png" alt="1"
+                        style="width:80px; height:80px;"></td>
+                     <td id="div2" cell="2" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div3" cell="3" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div4" cell="4" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div5" cell="5" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div6" cell="6" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td id="div7" cell="7" class="test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div8" cell="8" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div9" cell="9" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div10" cell="10" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div11" cell="11" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div12" cell="12" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td id="div13" cell="13" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div14" cell="14" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div15" cell="15" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div16" cell="16" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div17" cell="17" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div18" cell="18" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td id="div19" cell="19" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div20" cell="20" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div21" cell="21" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div22" cell="22" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div23" cell="23" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div24" cell="24" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td id="div25" cell="25" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div26" cell="26" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div27" cell="27" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div28" cell="28" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div29" cell="29" class=" panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div30" cell="30" class="panel test1" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+                  <tr>
+                     <td id="div31" cell="31" class=" panel" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div32" cell="32" class="panel " onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div33" cell="33" class=" panel" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div34" cell="34" class=" panel" onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div35" cell="35" class="panel " onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                     <td id="div36" cell="36" class="panel " onclick="canvasClicked(this)"><img
+                        src="images/grey.png" alt="1" style="width:80px; height:80px;">
+                     </td>
+                  </tr>
+               </table>
+            </div>
+            <div class="col-md-2">
+               <p id='demo'>player 1 start off</p>
+            </div>
+         </div>
+      </div>
+      <div id="div9" cell="9" class="" onclick="canvasClicked(this);"></div>
+   </body>
 </html>
