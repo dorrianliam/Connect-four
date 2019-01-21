@@ -1,6 +1,7 @@
-var cells = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var cells = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var turn = 'O';
 const num = 7
+const num1 = 1
 
 function toggleTurn() {
 
@@ -9,8 +10,6 @@ function toggleTurn() {
   return turn;
 }
 
-
-
 function canvasClicked(cell) {
   var cellIndex = cell.getAttribute('cell');
   if (!cells[cellIndex]) {
@@ -18,11 +17,11 @@ function canvasClicked(cell) {
     if (turn == 'X') {
       cell.innerHTML = "<img src='images/yellow.png' style='width:80px; height:80px'>";
       $("td").eq(cellIndex - num).addClass("test2")
-      $("td").eq(cellIndex - 1).addClass("animated bounceInDown ")
+      $("td").eq(cellIndex - num1).addClass("animated bounceInDown ")
     } else {
       cell.innerHTML = "<img src='images/red.png' style='width:80px; height:80px'>";
       $("td").eq(cellIndex - num).addClass("test2")
-      $("td").eq(cellIndex - 1).addClass("animated bounceInDown ")
+      $("td").eq(cellIndex - num1).addClass("animated bounceInDown ")
     }
     checkWinner();
   }
@@ -117,7 +116,6 @@ function playAgain() { // just another function to reset the game
     location.reload();
   } else {
     alert('Good Bye Then!!');
-
   }
 }
 
